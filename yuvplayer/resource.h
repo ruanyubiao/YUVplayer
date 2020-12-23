@@ -69,8 +69,9 @@
 #define ID_SIZE_CIF                     40025
 #define ID_SIZE_QCIF                    40026
 #define ID_SIZE_192X256                 40027
-#define ID_SIZE_CUSTOM                  40028
-#define ID_SIZE_END                     40028
+#define ID_SIZE_640X240                 40028
+#define ID_SIZE_CUSTOM                  40029
+#define ID_SIZE_END                     40029
 #define ID_ZOOM_START                   40040
 #define ID_ZOOM_41                      40040
 #define ID_ZOOM_21                      40041

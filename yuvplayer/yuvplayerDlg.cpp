@@ -64,10 +64,10 @@ CyuvplayerDlg::CyuvplayerDlg(CWnd* pParent /*=NULL*/)
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 
 	y = u = v = rgba = misc = segment = NULL;
-	m_color = YUV420;
+	m_color = RGB24;
 
 	fd = -1;
-	ratio = 1.0;
+	ratio = 0.5;
 
 	segment_option = 0;
 
@@ -153,7 +153,10 @@ BOOL CyuvplayerDlg::OnInitDialog()
 
 	customDlg = new CSizeDialog;
 
-	Resize( DEFAULT_WIDTH, DEFAULT_HEIGHT );
+    Resize( DEFAULT_WIDTH, DEFAULT_HEIGHT );
+	//OnSizeChange(ID_SIZE_HD);
+    //OnZoom(ID_ZOOM_12);
+	//OnColor(ID_COLOR_RGB24);
 
 	if( __argc == 2 ){
 
@@ -399,6 +402,11 @@ void CyuvplayerDlg::OnSizeChange(UINT nID )
         case ID_SIZE_192X256:
 			menu->CheckMenuItem( ID_SIZE_192X256,	MF_CHECKED);
 			Resize( 192, 256 );
+			return;
+
+        case ID_SIZE_640X240:
+            menu->CheckMenuItem(ID_SIZE_640X240,	MF_CHECKED);
+            Resize(640, 240);
 			return;
 
 	}

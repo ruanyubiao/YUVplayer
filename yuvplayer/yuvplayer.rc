@@ -76,16 +76,17 @@ BEGIN
     END
     POPUP "分辨率"
     BEGIN
-        MENUITEM "1080P (1920x1080)",           ID_SIZE_HD
+        MENUITEM "1080P (1920x1080)",           ID_SIZE_HD, CHECKED
         MENUITEM "720P  (1280x720)",            ID_SIZE_SD
         MENUITEM "&VGA   (640x480)",            ID_SIZE_VGA
         MENUITEM SEPARATOR
         MENUITEM "&WVGA   (832x480)",           ID_SIZE_WVGA
         MENUITEM "WQVGA (416x240)",             ID_SIZE_WQVGA
         MENUITEM SEPARATOR
-        MENUITEM "&CIF      (352x288)",         ID_SIZE_CIF, CHECKED
+        MENUITEM "&CIF      (352x288)",         ID_SIZE_CIF
         MENUITEM "&QCIF    (176x144)",          ID_SIZE_QCIF
         MENUITEM "SMALL (192x256)",             ID_SIZE_192X256
+        MENUITEM "DEPTH (640x240)",             ID_SIZE_640X240
         MENUITEM SEPARATOR
         MENUITEM "自定义",                         ID_SIZE_CUSTOM
     END
@@ -96,7 +97,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "YUV&444",                     ID_COLOR_YUV444
         MENUITEM "YUV4&22",                     ID_COLOR_YUV422
-        MENUITEM "YUV42&0",                     ID_COLOR_YUV420, CHECKED
+        MENUITEM "YUV42&0",                     ID_COLOR_YUV420
         MENUITEM "&Y",                          ID_COLOR_Y
         MENUITEM SEPARATOR
         MENUITEM "YUV",                         ID_COLOR_PACKEDYUV444
@@ -106,7 +107,7 @@ BEGIN
         MENUITEM "NV21",                        ID_COLOR_NV21
         MENUITEM SEPARATOR
         MENUITEM "RGB32",                       ID_COLOR_RGB32
-        MENUITEM "RGB24",                       ID_COLOR_RGB24
+        MENUITEM "RGB24",                       ID_COLOR_RGB24, CHECKED
         MENUITEM "RGB16",                       ID_COLOR_RGB16
     END
     POPUP "缩放"
@@ -114,8 +115,8 @@ BEGIN
         MENUITEM "8:1",                         ID_ZOOM_81
         MENUITEM "&4:1",                        ID_ZOOM_41
         MENUITEM "&2:1",                        ID_ZOOM_21
-        MENUITEM "&1:1",                        ID_ZOOM_11, CHECKED
-        MENUITEM "1:2",                         ID_ZOOM_12
+        MENUITEM "&1:1",                        ID_ZOOM_11
+        MENUITEM "1:2",                         ID_ZOOM_12, CHECKED
         MENUITEM "1:4",                         ID_ZOOM_14
     END
     POPUP "分块"
@@ -218,7 +219,7 @@ END
 
 
 /////////////////////////////////////////////////////////////////////////////
-// 朝鲜语(韩国) resources
+// 韩语(韩国) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
 LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
@@ -259,7 +260,7 @@ END
 
 #endif    // APSTUDIO_INVOKED
 
-#endif    // 朝鲜语(韩国) resources
+#endif    // 韩语(韩国) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
@@ -353,6 +354,7 @@ BEGIN
         MENUITEM "&CIF      (352x288)",         ID_SIZE_CIF, CHECKED
         MENUITEM "&QCIF    (176x144)",          ID_SIZE_QCIF
         MENUITEM "SMALL (192x256)",             ID_SIZE_192X256
+        MENUITEM "DEPTH (640x240)",             ID_SIZE_640X240
         MENUITEM SEPARATOR
         MENUITEM "C&ustom",                     ID_SIZE_CUSTOM
     END
@@ -529,17 +531,29 @@ END
 //
 
 OPEND                   BITMAP                  "res\\bitmap1.bmp"
+
 OPENU                   BITMAP                  "res\\bitmap2.bmp"
+
 FFORWARDU               BITMAP                  "res\\bitmap3.bmp"
+
 STOPD                   BITMAP                  "res\\bitmap4.bmp"
+
 STOPU                   BITMAP                  "res\\bitmap5.bmp"
+
 PLAYD                   BITMAP                  "res\\bitmap6.bmp"
+
 PLAYU                   BITMAP                  "res\\bitmap7.bmp"
+
 PAUSEU                  BITMAP                  "res\\bitmap8.bmp"
+
 PAUSED                  BITMAP                  "res\\bitmap9.bmp"
+
 FFORWARDD               BITMAP                  "res\\bitmap10.bmp"
+
 REWINDU                 BITMAP                  "res\\bitmap11.bmp"
+
 REWINDD                 BITMAP                  "res\\bitmap12.bmp"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -549,6 +563,7 @@ REWINDD                 BITMAP                  "res\\bitmap12.bmp"
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
 IDR_MAINFRAME           ICON                    "res\\myicon.ico"
+
 #endif    // 英语(美国) resources
 /////////////////////////////////////////////////////////////////////////////
 
